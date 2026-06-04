@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Chatbot</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static',
+          filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- FLOATING CHAT ICON -->
+
+    <div class="chatbot-icon"
+         id="chatbotIcon"
+         onclick="toggleChat()">
+
+        💬
+
+    </div>
+
+    <!-- CHAT CONTAINER -->
+
+    <div class="chat-container"
+         id="chatContainer">
+
+        <!-- HEADER -->
+
+        <div class="chat-header">
+
+            <div class="chat-title">
+
+                AI Assistant
+
+            </div>
+
+            <div class="window-buttons">
+
+                <button onclick="minimizeChat(event)">—</button>
+
+                <button onclick="maximizeChat(event)">□</button>
+
+                <button onclick="closeChat(event)">✕</button>
+
+            </div>
+
+        </div>
+
+        <!-- CHAT BODY -->
+
+        <div class="chat-body"
+             id="chatBody">
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <div class="chat-footer">
+
+            <div class="input-container">
+
+                <!-- ATTACHMENT -->
+
+                <div class="attachment-wrapper">
+
+                    <button class="attach-btn"
+                            onclick="toggleAttachmentMenu()">
+
+                        +
+
+                    </button>
+
+                    <div class="attachment-menu"
+                         id="attachmentMenu">
+
+                        <div onclick="openFile('image')">
+                            🖼 Photos
+                        </div>
+
+                        <div onclick="openFile('pdf')">
+                            📄 PDF File
+                        </div>
+
+                        <div onclick="openFile('docx')">
+                            📝 DOCX File
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- FILE INPUT -->
+
+                <input type="file"
+                       id="fileInput"
+                       hidden
+                >
+
+                <!-- MIC -->
+
+                <button class="mic-btn"
+                        onclick="startVoice()">
+
+                    🎤
+
+                </button>
+
+                <!-- TEXT -->
+
+                <input type="text"
+                       id="message"
+                       placeholder="Type your message..."
+                       autocomplete="off">
+
+                <!-- SEND -->
+
+                <button class="send-btn"
+                        id="sendBtn"
+                        onclick="sendMessage()">
+
+                    ➤
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static',
+    filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

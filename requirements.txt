@@ -1,0 +1,13 @@
+flask
+flask-cors
+langchain
+langchain-community
+chromadb
+sentence-transformers
+pypdf
+python-docx
+ollama
+SpeechRecognition
+pyttsx3
+pyaudio
+python-dotenv
